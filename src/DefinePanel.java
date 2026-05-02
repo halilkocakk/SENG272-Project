@@ -60,6 +60,11 @@ public class DefinePanel extends StepPanel {
         add(backButton);
         add(nextButton);
 
+        nextButton.setBackground(new Color(90, 181, 86, 255));
+        nextButton.setForeground(Color.WHITE);
+        backButton.setBackground(new Color(209, 203, 94, 255));
+        backButton.setForeground(Color.WHITE);
+
         backButton.addActionListener(backListener);
         nextButton.addActionListener(nextListener);
 
@@ -68,6 +73,7 @@ public class DefinePanel extends StepPanel {
 
         healthRadio.addActionListener(e -> updateScenarioList("HEALTH"));
         educationRadio.addActionListener(e -> updateScenarioList("EDUCATION"));
+
     }
 
     public void updateScenarioList(String mode) {

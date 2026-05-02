@@ -29,6 +29,10 @@ public class CollectPanel extends StepPanel {
         JPanel buttonPanel = new JPanel();
         buttonPanel.add(backButton = new JButton("Back"));
         buttonPanel.add(nextButton = new JButton("Next"));
+        nextButton.setBackground(new Color(90, 181, 86, 255));
+        nextButton.setForeground(Color.WHITE);
+        backButton.setBackground(new Color(209, 203, 94, 255));
+        backButton.setForeground(Color.WHITE);
         backButton.setActionCommand("CollectBack");
         nextButton.setActionCommand("CollectNext");
         backButton.addActionListener(backListener);

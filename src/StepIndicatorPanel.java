@@ -27,7 +27,7 @@ public class StepIndicatorPanel extends JPanel{
         for(int i = 0; i < stepLabels.size(); i++) {
             JLabel label = stepLabels.get(i);
             if(i == currentStep - 1) {
-                label.setBackground(Color.RED);
+                label.setBackground(new Color(0x5DA2DA));
                 label.setForeground(Color.DARK_GRAY);
                 label.setFont(label.getFont().deriveFont(Font.BOLD));
             } else {

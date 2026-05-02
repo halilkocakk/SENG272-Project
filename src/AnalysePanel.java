@@ -24,6 +24,7 @@ public class AnalysePanel extends StepPanel{
         add(gapAnalysisLabel, BorderLayout.NORTH);
 
         backButton = new JButton("Back");
+        backButton.setBackground(new Color(209, 203, 94, 255));
         backButton.setActionCommand("AnalyseBack");
         backButton.addActionListener(backListener);
         add(backButton, BorderLayout.SOUTH);
@@ -41,6 +42,12 @@ public class AnalysePanel extends StepPanel{
             bar.setStringPainted(true);
             barPanel.add(bar);
             resultBars.add(bar);
+            if(score < 40)
+                bar.setForeground(new Color(156, 51, 51));
+            else if(score < 70)
+                bar.setForeground(new Color(200, 136, 35));
+            else
+                bar.setForeground(new Color(77, 152, 70));
         }
         showGapAnalysis(scenario);
         revalidate();

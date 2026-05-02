@@ -32,6 +32,9 @@ public class WizzardController implements ActionListener{
             case "PlanBack":
                 mainFrame.showStep("Define", 2);
                 break;
+            case "DefineBack":
+                mainFrame.showStep("Profile", 1);
+                break;
             case"CollectBack":
                 mainFrame.showStep("Plan", 3);
                 break;

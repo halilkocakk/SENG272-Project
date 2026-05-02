@@ -11,26 +11,34 @@ public class ProfilePanel extends StepPanel {
     public ProfilePanel(ActionListener nextListener) {
         super("Profile");
 
-        setLayout(new GridLayout(4, 2, 10, 10));
+        setLayout(new BorderLayout(10,10));
+        setBorder(BorderFactory.createEmptyBorder(40, 60, 40, 60));
 
-        add(new JLabel("Username: "));
-        userNameField = new JTextField();
-        add(userNameField);
+        JPanel formPanel = new JPanel(new GridLayout(3, 2, 10, 10));
 
-        add(new JLabel("School: "));
-        schoolField = new JTextField();
-        add(schoolField);
+        formPanel.add(new JLabel("Username: "));
+        formPanel.add(userNameField = new JTextField(20));
 
-        add(new JLabel("Session Name: "));
-        sessionNameField = new JTextField();
-        add(sessionNameField);
+        formPanel.add(new JLabel("School: "));
+        formPanel.add(schoolField = new JTextField(20));
 
-        nextButton = new JButton("Next");
-        add(new JLabel());
-        add(nextButton);
+        formPanel.add(new JLabel("Session Name: "));
+        formPanel.add(sessionNameField = new JTextField(20));
+
+        add(formPanel, BorderLayout.NORTH);
+
+        JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
+        buttonPanel.add(nextButton = new JButton("Next"));
+        nextButton.setPreferredSize(new Dimension(120, 40));
+        nextButton.setBackground(new Color(90, 181, 86));
+        nextButton.setForeground(Color.WHITE);
+        nextButton.setFocusPainted(false);
+        buttonPanel.add(nextButton);
+        add(buttonPanel, BorderLayout.SOUTH);
 
         nextButton.addActionListener(nextListener);
         nextButton.setActionCommand("ProfileNext");
+
         userNameField.addActionListener(e -> schoolField.requestFocus());
         schoolField.addActionListener(e -> sessionNameField.requestFocus());
         sessionNameField.addActionListener(e -> nextButton.doClick());

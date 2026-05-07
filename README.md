@@ -55,24 +55,20 @@ The project follows a modular and layered design:
 4. Enter measurement values
 5. Analyze results and identify weakest dimension
 
-## 📊 ISO/IEC 25023 Metric Reference
+## 📊 Quality Metrics Used in the Project
 
-| ISO 25010 Characteristic | ISO 25023 Metric Name | Direction | Unit |
+| Quality Characteristic | Metric Name | Direction | Unit |
 |---|---|---|---|
-| Functional Suitability | Functional Completeness Ratio | Higher | % |
-| Functional Suitability | Functional Correctness Ratio | Higher | % |
-| Reliability | Availability Ratio | Higher | % |
-| Reliability | Defect Density | Lower | defect/KLOC |
-| Reliability | MTBF (Mean Time Between Failures) | Higher | hours |
-| Performance Efficiency | Response Time | Lower | ms |
-| Performance Efficiency | Throughput | Higher | req/s |
-| Performance Efficiency | CPU Utilisation Ratio | Lower | % |
-| Usability | Task Completion Rate | Higher | % |
-| Usability | User Error Rate | Lower | % |
-| Security | Security Test Coverage | Higher | % |
-| Security | Vulnerability Count | Lower | count |
-| Maintainability | Test Coverage Ratio | Higher | % |
-| Maintainability | Cyclomatic Complexity (avg) | Lower | score |
+| Usability | SUS Score | Higher | points |
+| Usability | Onboarding Time | Lower | min |
+| Performance Efficiency | Video Start Time | Lower | sec |
+| Performance Efficiency | Concurrent Exams | Higher | users |
+| Accessibility | WCAG Compliance | Higher | % |
+| Accessibility | Screen Reader Score | Higher | % |
+| Reliability | Uptime | Higher | % |
+| Reliability | MTTR | Lower | min |
+| Functional Suitability | Feature Completion | Higher | % |
+| Functional Suitability | Assignment Submit Rate | Higher | % |
 
 ## 🛠 Technologies Used
 

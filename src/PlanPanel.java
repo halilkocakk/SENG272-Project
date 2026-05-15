@@ -47,8 +47,8 @@ public class PlanPanel extends StepPanel {
                         dimension.getName(),
                         metric.getName(),
                         metric.getCoefficient(),
-                        "_",
-                        "_",
+                        metric.getMinValue(),
+                        metric.getMaxValue(),
                         metric.isHigherBetter() ? "Higher is Better" : "Lower is Better"
                 });
             }

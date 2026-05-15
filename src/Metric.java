@@ -24,8 +24,11 @@ public class Metric {
         this.value = value;
     }
 
-    public double getValue() {
-        return value;
+    public double getMinValue() {
+        return minValue;
+    }
+
+    public double getMaxValue() { return maxValue;
     }
 
     public String getName() {

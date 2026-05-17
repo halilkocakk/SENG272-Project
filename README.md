@@ -82,3 +82,6 @@ The project follows a modular and layered design:
 1. Open project in IntelliJ IDEA
 2. Run the `Main` class
 
+## 🎥 Project Presentation Video
+
+Project presentation video information is available in [`docs/project_presentation.md`](docs/project_presentation.md).
